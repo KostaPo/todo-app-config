@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-config-server
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: when_authorized
+      cache:
+        time-to-live: 10s
