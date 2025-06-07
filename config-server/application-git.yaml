@@ -1,0 +1,13 @@
+spring:
+  config:
+    import: optional:file:../.env[.properties]
+  cloud:
+    config:
+      server:
+        git:
+          order: 2
+          uri: ${GIT_URI}
+          clone-on-start: true
+          default-label: main
+          search-paths:
+            - '{application}/{profile}'
