@@ -1,6 +1,7 @@
 spring:
   cloud:
     config:
+      name: migration
       discovery:
         enabled: true
         service-id: cloud-config-server
